@@ -1,3 +1,4 @@
+/********* overskrifter, tekst og padding mm  *********/
 h1 {
   font-family: "Corben", serif;
   font-weight: 700;
@@ -16,18 +17,43 @@ h3 {
   text-align: center;
 }
 
+.a {
+  line-height: 2.5rem;
+  font-size: 15px;
+  font-family: "Corben", serif;
+  color: black;
+  font-weight: bold;
+}
+
 h2 {
   font-size: 35px;
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+h3 {
+  padding: 1rem;
+  font-size: 20px;
 }
 
 p {
   line-height: 2.5rem;
   font-size: 20px;
   font-family: "Corben", serif;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 .grid_1-1-1-1background {
   background-color: #f2e7dc;
 }
+
+.why:hover {
+  transform: scale(1.2);
+}
+
+/******** desktop version  **********/
 
 @media (min-width: 800px) {
   .grid_1-1-1-1 {
@@ -50,18 +76,15 @@ p {
     margin-bottom: 7rem;
   }
 
-  .why:hover {
-    transform: scale(1.2);
-  }
-
   .grid_1-1 img {
     object-fit: cover;
     align-self: stretch;
-
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .grid_1-1 {
@@ -69,11 +92,38 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
+}
 
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/************ mobilversion  ***********/
+@media (max-width: 800px) {
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .grid_1-1-1-1 img {
+    padding: 2rem;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  .grid_1-1 img {
+    object-fit: cover;
+    align-self: stretch;
+  }
+  h3 {
+    padding: 2rem;
+  }
+  p {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 17px;
+  }
+  .a {
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 29px;
   }
 }
